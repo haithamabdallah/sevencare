@@ -1,0 +1,35 @@
+#categoriesList .categories-list .category a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 10px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  text-align: center;
+  align-self: center;
+}
+#categoriesList .categories-list .category a img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@media (max-width: 575.98px) {
+  #categoriesList {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 767.98px) {
+  #categoriesList {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 991.98px) {
+  #categoriesList {
+    margin-bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=categories.css.map */

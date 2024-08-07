@@ -1,0 +1,95 @@
+/* Home Slider */
+.home-slider .home-next, .home-slider .home-prev {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: ease-in-out 0.25s;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.home-slider .home-next:hover, .home-slider .home-next:focus, .home-slider .home-prev:hover, .home-slider .home-prev:focus {
+  transition: ease-in-out 0.25s;
+  background: rgba(255, 255, 255, 0.8);
+}
+.home-slider .home-next i, .home-slider .home-prev i {
+  color: #3498db;
+}
+.home-slider .home-prev {
+  left: 10px;
+}
+.home-slider .home-next {
+  right: 10px;
+}
+
+/* Banner Slider */
+.banner-slider {
+  margin-bottom: 55px;
+}
+.banner-slider .banner-next, .banner-slider .banner-prev {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: ease-in-out 0.25s;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.banner-slider .banner-next:hover, .banner-slider .banner-next:focus, .banner-slider .banner-prev:hover, .banner-slider .banner-prev:focus {
+  transition: ease-in-out 0.25s;
+  background: rgba(255, 255, 255, 0.8);
+}
+.banner-slider .banner-next i, .banner-slider .banner-prev i {
+  color: #3498db;
+}
+.banner-slider .banner-prev {
+  left: 10px;
+}
+.banner-slider .banner-next {
+  right: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .home-next, .home-prev {
+    width: 30px;
+    height: 30px;
+  }
+  .banner-next, .banner-prev {
+    width: 30px;
+    height: 30px;
+  }
+  .home-slider,
+  .banner-slider {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 767.98px) {
+  .home-slider,
+  .banner-slider {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 991.98px) {
+  .home-slider,
+  .banner-slider {
+    margin-bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=swiper.css.map */
