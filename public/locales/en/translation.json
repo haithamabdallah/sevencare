@@ -1,0 +1,36 @@
+
+{
+  "welcome": "Welcome",
+  "description": "This is an example description.",
+  "categories": {
+    "skin-care": "Skin Care",
+    "hair-care": "Hair Care",
+    "makeup": "Makeup",
+    "last-chance-offers": "Last Chance Offers",
+    "global-products": "Global Products",
+    "mom-baby": "Mom & Baby",
+    "diapers": "Diapers",
+    "treatments": "Treatments",
+    "daily-essentials": "Daily Essentials",
+    "healthy-food": "Healthy Food",
+    "vitamins": "Vitamins",
+    "health-care": "Health Care",
+    "moisturizers": "Moisturizers",
+    "cleansers": "Cleansers",
+    "serum" : "Serum",
+    "masks": "Masks",
+    "sun-care": "Sun care",
+    "skin-tech-tools": "Skin Tech Tools",
+    "trending": "Trending",
+    "shampoo-conditioner": "Shampoo & Conditioner",
+    "hair-nourishment": "Hair Nourishment",
+    "hair-styling": "Hair Styling",
+    "hair-brushes-accessories": "Hair Brushes & Accessories",
+    "hair-styling-devices": "Hair Styling Devices",
+    "hair-coloring": "Hair Coloring",
+    "salon-hair-care": "Salon Hair Care",
+    "hair-scalp-treatment": "Hair & Scalp Treatment",
+    "professional-hair-care": "Professional Hair Care"
+  }
+}
+

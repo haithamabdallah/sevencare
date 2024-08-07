@@ -1,0 +1,38 @@
+
+{
+  "welcome": "أهلاً وسهلاً",
+  "description": "هذا وصف مثال.",
+  "categories": {
+    "skin-care": "العناية بالبشرة",
+    "hair-care": "العناية بالشعر",
+    "makeup": "المكياج والعدسات",
+    "last-chance-offers": "عروض الفرصة الأخيرة",
+    "global-products": "نهدي جلوبال",
+    "mom-baby": "الأم والطفل",
+    "diapers": "الحفاضات",
+    "treatments": "الأدوية",
+    "daily-essentials": "العناية الشخصية",
+    "healthy-food": "الأغذية الصحية",
+    "vitamins": "الفيتامينات",
+    "health-care": "العناية بالصحة",
+    "moisturizers": "الغسول",
+    "cleansers": "الترطيب",
+    "serum" : "السيروم",
+    "masks": "الماسك",
+    "sun-care": "الوقاية من الشمس",
+    "skin-tech-tools": "أجهزة العناية بالبشرة",
+    "trending": "منتجات دارجة",
+    "shampoo-conditioner": "الشامبو و البلسم",
+    "hair-nourishment": "تغذية الشعر",
+    "hair-styling": "تصفيف الشعر",
+    "hair-brushes-accessories": "إكسسوارات وفرش الشعر",
+    "hair-styling-devices": "أجهزة تصفيف الشعر",
+    "hair-coloring": "صبغات الشعر",
+    "salon-hair-care": "معالجات الشعر",
+    "hair-scalp-treatment": "علاج الشعر و الفروة",
+    "professional-hair-care": "عناية الخبراء"
+  }
+}
+
+
+

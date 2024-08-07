@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import HomeSlider from "./components/swiper/HomeSlider";
+import LoadingSpinner from "./Spinner";
+import CategoriesList from "./components/categories/CategoriesList";
+import BannerSlider from "./components/swiper/BannerSlider";
+import Sections from "./components/sections/Sections";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { t, i18n } = useTranslation();
+    const [loading, setLoading] = useState(false);
+
+    const changeLanguage = (lng) => {
+        setLoading(true);
+        i18n.changeLanguage(lng).then(() => {
+            setLoading(false);
+        });
+    };
+
+    return (
+        <div className={`${i18n.language === 'ar' ? 'rtl' : 'ltr'}`}>
+            {loading ? (
+                <LoadingSpinner />
+            ) : (
+                <div className="fade-in">
+                    <h1 className="text-3xl font-bold underline">{t('welcome')}</h1>
+                    <p>{t('description')}</p>
+                    <button onClick={() => changeLanguage('en')}>English</button>
+                    <button onClick={() => changeLanguage('ar')}>العربية</button>
+                    <CategoriesList />
+                    <HomeSlider />
+                    <BannerSlider />
+                    <Sections />
+                </div>
+            )}
+        </div>
+    );
 }
 
 export default App;
