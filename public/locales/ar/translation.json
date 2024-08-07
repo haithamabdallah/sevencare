@@ -31,8 +31,26 @@
     "salon-hair-care": "معالجات الشعر",
     "hair-scalp-treatment": "علاج الشعر و الفروة",
     "professional-hair-care": "عناية الخبراء"
+  },
+  "sections": {
+    "top-online-exclusive-offers": {
+      "title": "أفضل 4 عروض حصرية عبر الإنترنت"
+    },
+    "skin-care": {
+      "title": "العناية بالبشرة"
+    },
+    "diapers-best-offers": {
+      "title": "أفضل عروض الحفاضات"
+    },
+    "supplements-best-offers": {
+      "title": "أفضل عروض المكملات الغذائية"
+    },
+    "spend-less-get-more": {
+      "title": "أنفق أقل واحصل على المزيد!"
+    }
   }
 }
+
 
 
 

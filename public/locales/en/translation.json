@@ -31,6 +31,24 @@
     "salon-hair-care": "Salon Hair Care",
     "hair-scalp-treatment": "Hair & Scalp Treatment",
     "professional-hair-care": "Professional Hair Care"
+  },
+  "sections": {
+    "top-online-exclusive-offers": {
+      "title": "Top 4 Online Exclusive Offers"
+    },
+    "skin-care": {
+      "title": "Skin Care"
+    },
+    "diapers-best-offers": {
+      "title": "Diapers Best Offers"
+    },
+    "supplements-best-offers": {
+      "title": "Supplements Best Offers"
+    },
+    "spend-less-get-more": {
+      "title": "Spend Less Get More!"
+    }
   }
+
 }
 
