@@ -10,7 +10,7 @@ const Section = ({ slug, items }) => {
     return (
         <div className="section-section">
             <h1>{t(`sections.${slug}.title`)}</h1>
-            <ul className="items">
+            <ul className="items grid grid-cols-2 gap-[20px] sm:grid-cols-2 md:grid-cols-4">
                 {items.map(item => (
                     <li key={item.id}>
                         <a href={item.href}>
