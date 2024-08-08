@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-const Header = () => {
+const Header = ({ changeLanguage, currentLanguage }) => {
     const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [isScrollingUp, setIsScrollingUp] = useState(false);
+    const [isScrollingUp, setIsScrollingUp] = useState(true);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isAtTop, setIsAtTop] = useState(true);
     const dropdownRef = useRef(null);
     const delta = 5;
 
@@ -11,14 +12,21 @@ const Header = () => {
         const handleScroll = () => {
             const st = window.pageYOffset || document.documentElement.scrollTop;
 
+            // Check if the user is at the top of the page
+            if (st === 0) {
+                setIsAtTop(true);
+            } else {
+                setIsAtTop(false);
+            }
+
             if (Math.abs(lastScrollTop - st) <= delta) {
                 return;
             }
 
             if (st > lastScrollTop) {
-                setIsScrollingUp(false); // Scrolling down
+                setIsScrollingUp(false);
             } else {
-                setIsScrollingUp(true); // Scrolling up
+                setIsScrollingUp(true);
             }
 
             setLastScrollTop(st);
@@ -55,33 +63,42 @@ const Header = () => {
                 isScrollingUp ? 'translate-y-0' : '-translate-y-full'
             }`}
         >
-            <div className="max-w-[1230px] px-[20px] bg-white mx-auto">
-                <div className="p-4 flex justify-between items-center">
+            <div className="max-w-[1230px] px-[20px] mx-auto">
+                <div className={`header-row-1 p-4 flex items-center justify-between transition-colors duration-300 ${
+                    isAtTop ? 'bg-transparent' : 'bg-white'
+                }`}>
                     {/* Row 1: Logo and Nav */}
-                    <div className="flex items-center space-x-4">
-                        <div className="font-bold text-xl">Logo</div>
-                        <nav className="flex items-center space-x-4">
-                            <a href="#language" className="text-gray-600">Language</a>
-                            <a href="#signin" className="text-gray-600">Sign In / Register</a>
-                            <a href="#favorites" className="text-gray-600">Favorites</a>
-                            <a href="#cart" className="text-gray-600">My Cart</a>
-                        </nav>
-                    </div>
+                    <div className="font-bold text-xl">Logo</div>
+                    <nav className="flex items-center gap-[15px]">
+                        {currentLanguage === 'en' ? (
+                            <button onClick={() => changeLanguage('ar')}>العربية</button>
+                        ) : (
+                            <button onClick={() => changeLanguage('en')}>English</button>
+                        )}
+                        <a href="/signin" className="text-gray-600">Sign In / Register</a>
+                        <a href="/favorites" className="text-gray-600">Favorites</a>
+                        <a href="/cart" className="text-gray-600">My Cart</a>
+                    </nav>
                 </div>
-                <div className="bg-gray-100 p-4 flex justify-between items-center">
+                <div className="bg-gray-100 flex justify-between items-center mt-[5px]">
                     {/* Row 2: Categories and Search */}
-                    <div className="flex items-center space-x-4 relative">
-                        <button onClick={toggleDropdown} className="text-gray-600">
-                            All Categories
+                    <div className="flex items-center gap-[30px] relative">
+                        <button onClick={toggleDropdown} className="flex justify-between gap-[15px] items-center text-white p-4 bg-blue-600 min-w-[250px]">
+                            <i className="fa-solid fa-border-none"></i>
+                            <span className="font-bold">All Categories</span>
+                            <i className="fa-solid fa-chevron-down"></i>
                         </button>
                         {isDropdownOpen && (
-                            <div ref={dropdownRef} className="absolute left-0 mt-2 w-48 bg-white shadow-lg">
-                                <a href="#category1" className="block px-4 py-2 text-gray-700">Category 1</a>
+                            <div ref={dropdownRef} className="absolute top-[50px] left-0 mt-2 w-[400px] bg-white shadow-lg divide-y divide-gray-400">
+                                <a href="#category1" className="flex justify-between items-center px-4 py-2 text-gray-700">
+                                    <span className="font-bold">Category 1</span>
+                                    <i className="fa-solid fa-chevron-right fa-sm text-blue-600"></i>
+                                </a>
                                 <a href="#category2" className="block px-4 py-2 text-gray-700">Category 2</a>
                                 <a href="#subcategory1" className="block px-4 py-2 text-gray-700">Subcategory 1</a>
                             </div>
                         )}
-                        <a href="#offer" className="text-gray-600">Offer</a>
+                        <a href="#offer" className="text-red-600 font-bold">Offer</a>
                     </div>
                     <div>
                         <input type="text" placeholder="Search" className="border border-gray-300 p-2" />

@@ -24,12 +24,7 @@ function App() {
                 <LoadingSpinner />
             ) : (
                 <div className="fade-in">
-                    {/*<h1 className="text-3xl font-bold underline">{t('welcome')}</h1>
-                    <p>{t('description')}</p>
-                    <button onClick={() => changeLanguage('en')}>English</button>
-                    <button onClick={() => changeLanguage('ar')}>العربية</button>*/}
-
-                    <Header />
+                    <Header changeLanguage={changeLanguage} currentLanguage={i18n.language} />
                     <CategoriesList />
                     <HomeSlider />
                     <BannerSlider />

@@ -3,6 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f7fafa;
 }
 [dir="rtl"] body {
   font-family: 'Tajawal', sans-serif; /* Apply Arabic font for RTL */
@@ -157,7 +158,9 @@ header {
 .-translate-y-full {
   transform: translateY(-100%);
 }
-
+#categoriesList {
+  margin-top: 150px;
+}
 
 @keyframes fadeIn {
   from {
