@@ -5,6 +5,7 @@ import LoadingSpinner from "./Spinner";
 import CategoriesList from "./components/categories/CategoriesList";
 import BannerSlider from "./components/swiper/BannerSlider";
 import Sections from "./components/sections/Sections";
+import Header from "./components/header/Header";
 
 function App() {
     const { t, i18n } = useTranslation();
@@ -23,10 +24,12 @@ function App() {
                 <LoadingSpinner />
             ) : (
                 <div className="fade-in">
-                    <h1 className="text-3xl font-bold underline">{t('welcome')}</h1>
+                    {/*<h1 className="text-3xl font-bold underline">{t('welcome')}</h1>
                     <p>{t('description')}</p>
                     <button onClick={() => changeLanguage('en')}>English</button>
-                    <button onClick={() => changeLanguage('ar')}>العربية</button>
+                    <button onClick={() => changeLanguage('ar')}>العربية</button>*/}
+
+                    <Header />
                     <CategoriesList />
                     <HomeSlider />
                     <BannerSlider />

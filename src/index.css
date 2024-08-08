@@ -144,6 +144,21 @@ code {
   animation: fadeIn 0.5s;
 }
 
+header {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  z-index: 10;
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+.-translate-y-full {
+  transform: translateY(-100%);
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
