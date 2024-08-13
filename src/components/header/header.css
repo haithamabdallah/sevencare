@@ -1,0 +1,26 @@
+header.default-header .d-logo, header.mobile-header .d-logo {
+  max-width: 150px;
+}
+
+@media (max-width: 575.98px) {
+  .default-header {
+    display: none;
+  }
+}
+@media (min-width: 767.98px) {
+  .default-header {
+    display: none;
+  }
+}
+@media (min-width: 991.98px) {
+  .default-header {
+    display: block;
+  }
+}
+@media (min-width: 1199.98px) {
+  .default-header {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

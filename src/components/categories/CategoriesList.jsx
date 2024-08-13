@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import categories from './categories';
 import { useTranslation } from 'react-i18next';
 import 'swiper/css';
@@ -41,10 +42,10 @@ const CategoriesList = () => {
                         {categories.map(category => (
                             <SwiperSlide key={category.id}>
                                 <div className="category">
-                                    <a href={`${category.href}-${category.slug}-${category.id}`}>
+                                    <Link to={`/category/${category.slug}`}>
                                         <img src={category.image} alt={t(`categories.${category.slug}`)} />
                                         <h2>{t(`categories.${category.slug}`)}</h2>
-                                    </a>
+                                    </Link>
                                 </div>
                             </SwiperSlide>
                         ))}

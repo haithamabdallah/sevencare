@@ -1,0 +1,50 @@
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-btn, .cart-btn, .search-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-input {
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+@media (max-width: 575.98px) {
+  .mobile-header {
+    display: flex;
+  }
+}
+@media (min-width: 767.98px) {
+  .mobile-header {
+    display: flex;
+  }
+}
+@media (min-width: 991.98px) {
+  .mobile-header {
+    display: none;
+  }
+}
+@media (min-width: 1199.98px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=MobileHeader.css.map */

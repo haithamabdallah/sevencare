@@ -1,0 +1,77 @@
+#brandsList .title h1 {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #262626;
+  margin-bottom: 20px;
+}
+
+.swiper-slide {
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+/* Additional customization */
+.brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Adjust this to suit your layout */
+  width: 100%;
+  height: 100%;
+}
+.brands a {
+  transition: ease-in-out 0.35s;
+  display: block;
+  overflow: hidden;
+}
+.brands a img {
+  transition: ease-in-out 0.35s;
+  transform: scale(1);
+}
+.brands a:hover {
+  transition: ease-in-out 0.35s;
+}
+.brands a:hover img {
+  transition: ease-in-out 0.35s;
+  transform: scale(1.1);
+}
+
+.brands img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.swiper-grid-column {
+  flex-direction: row !important;
+}
+
+.swiper-grid > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+
+.swiper-grid-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: row;
+  grid-row-gap: 30px;
+}
+
+@media (max-width: 575.98px) {
+  #brandsList {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 767.98px) {
+  #brandsList {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 991.98px) {
+  #brandsList {
+    margin-bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=brands.css.map */

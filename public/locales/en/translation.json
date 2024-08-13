@@ -2,6 +2,9 @@
 {
   "welcome": "Welcome",
   "description": "This is an example description.",
+  "all-categories": "All Categories",
+  "offers": "Offers",
+  "shop-brands": "Shop by Brands",
   "categories": {
     "skin-care": "Skin Care",
     "hair-care": "Hair Care",
@@ -32,6 +35,18 @@
     "hair-scalp-treatment": "Hair & Scalp Treatment",
     "professional-hair-care": "Professional Hair Care"
   },
+  "brands": {
+    "isispharma" :  "Isis Pharma",
+    "nivea" : "Niviea",
+    "skin-cenuticals" :  "Skin Cenuticals",
+    "water-wipes" : "Water Wipes",
+    "mustela" :  "Mustela",
+    "svr" : "SVR",
+    "loreal" :  "L'Oreal",
+    "pjur" : "Pjur",
+    "priorin" :  "Priorin",
+    "kerastase" :"Kerastase"
+  },
   "sections": {
     "top-online-exclusive-offers": {
       "title": "Top 4 Online Exclusive Offers"
@@ -48,6 +63,11 @@
     "spend-less-get-more": {
       "title": "Spend Less Get More!"
     }
+  },
+  "headers": {
+    "sign-in": "Sign In / Register",
+    "my-favourite": "Favorites",
+    "my-cart": "My Cart"
   }
 
 }

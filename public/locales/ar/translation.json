@@ -2,6 +2,9 @@
 {
   "welcome": "أهلاً وسهلاً",
   "description": "هذا وصف مثال.",
+  "all-categories": "جميع الفئات",
+  "offers": "العروض",
+  "shop-brands": "أفضل العلامات التجارية",
   "categories": {
     "skin-care": "العناية بالبشرة",
     "hair-care": "العناية بالشعر",
@@ -32,6 +35,18 @@
     "hair-scalp-treatment": "علاج الشعر و الفروة",
     "professional-hair-care": "عناية الخبراء"
   },
+  "brands": {
+    "isispharma" :  "ازيس فارما",
+    "nivea" : "نيفيا",
+    "skin-cenuticals" :  "سكينسيوتيكالز",
+    "water-wipes" : "واتر وايبس",
+    "mustela" :  "موستيلا",
+    "svr" : "اس في ار",
+    "loreal" :  "لوريل",
+    "pjur" : "بيجور",
+    "priorin" :  "بريورين",
+    "kerastase" :"كريستاسي"
+  },
   "sections": {
     "top-online-exclusive-offers": {
       "title": "أفضل 4 عروض حصرية عبر الإنترنت"
@@ -48,6 +63,11 @@
     "spend-less-get-more": {
       "title": "أنفق أقل واحصل على المزيد!"
     }
+  },
+  "headers": {
+    "sign-in": "تسجيل الدخول / التسجيل",
+    "my-favourite": "المفضلة",
+    "my-cart": "سلة التسوق"
   }
 }
 

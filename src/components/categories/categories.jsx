@@ -91,7 +91,39 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             },
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/categorySlider/01.webp', href: '/page-id' },
+            { id: 2, image: '/images/categorySlider/02.webp', href: '/page-id' },
+            { id: 3, image: '/images/categorySlider/03.webp', href: '/page-id' },
+            { id: 4, image: '/images/categorySlider/04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 2,
@@ -194,7 +226,38 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/categorySlider/hair-01.webp', href: '/page-id' },
+            { id: 2, image: '/images/categorySlider/hair-02.webp', href: '/page-id' },
+            { id: 3, image: '/images/categorySlider/hair-03.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 3,
@@ -217,7 +280,37 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/categorySlider/makeup-01.webp', href: '/page-id' },
+            { id: 2, image: '/images/categorySlider/makeup-02.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 4,
@@ -240,7 +333,39 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/page-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/page-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/page-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 5,
@@ -263,7 +388,39 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/page-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/page-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/page-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 6,
@@ -286,7 +443,40 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/categorySlider/mom-01.webp', href: '/page-id' },
+            { id: 2, image: '/images/categorySlider/mom-02.webp', href: '/page-id' },
+            { id: 3, image: '/images/categorySlider/mom-03.webp', href: '/page-id' },
+            { id: 4, image: '/images/categorySlider/mom-04.webp', href: '/page-id' },
+            { id: 5, image: '/images/categorySlider/mom-05.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 7,
@@ -309,7 +499,39 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/page-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/page-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/page-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 8,
@@ -332,7 +554,38 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/categorySlider/tre-01.webp', href: '/page-id' },
+            { id: 2, image: '/images/categorySlider/tre-02.webp', href: '/page-id' },
+            { id: 3, image: '/images/categorySlider/tre-03.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 9,
@@ -355,7 +608,39 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/page-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/page-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/page-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 10,
@@ -378,7 +663,39 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/page-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/page-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/page-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 11,
@@ -401,7 +718,40 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/categorySlider/vit-01.webp', href: '/page-id' },
+            { id: 2, image: '/images/categorySlider/vit-02.webp', href: '/page-id' },
+            { id: 3, image: '/images/categorySlider/vit-03.webp', href: '/page-id' },
+            { id: 4, image: '/images/categorySlider/vit-04.webp', href: '/page-id' },
+            { id: 4, image: '/images/categorySlider/vit-04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
     {
         id: 12,
@@ -424,7 +774,39 @@ const categories = [
                 productsCount: 50,
                 featured: true,
             }
-        ]
+        ],
+        sliders: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/page-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/page-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/page-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/page-id' },
+        ],
+        brands: [
+            { id: 1, image: '/images/sections/spen01.webp', href: '/brand-id' },
+            { id: 2, image: '/images/sections/spen02.webp', href: '/brand-id' },
+            { id: 3, image: '/images/sections/spen03.webp', href: '/brand-id' },
+            { id: 4, image: '/images/sections/spen04.webp', href: '/brand-id' },
+        ],
+        products: [
+            {
+                id: 1,
+                name: 'Hair Dye Brush',
+                url: '/product/1',
+                coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
+                description: 'This is the description for product 1.',
+                images: [
+                    '/images/products/coverImage1.jpg',
+                    '/images/products/coverImage2.jpg',
+                    '/images/products/coverImage3.jpg',
+                ],
+                shortDescription: 'Short description of product 1.',
+                longDescription: 'A hairbrush is a brush with rigid (hard or inflexible) or light and soft spokes used in hair care for smoothing, styling, and detangling human hair, or for grooming an animal\'s fur. It can also be used for styling in combination with a curling iron or hair dryer.',
+                price: 60.61,
+                quantity: 30,
+                discount: true,
+                priceAfterDiscount: 30,
+            },
+        ],
     },
 ];
 

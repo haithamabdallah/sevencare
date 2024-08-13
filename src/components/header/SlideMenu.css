@@ -1,0 +1,167 @@
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.slide-menu.open {
+    transform: translateX(0);
+}
+
+.slide-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.welcome-message p {
+    margin: 0;
+}
+
+.welcome-message a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.menu-categories {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.category-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subcategories {
+    padding-left: 15px;
+}
+
+.subcategory-item {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.subcategory-item:hover {
+    text-decoration: underline;
+}
+
+.slide-menu {
+    /* Your slide menu styles */
+}
+
+.welcome-message {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.menu {
+    background-color: white;
+}
+
+.category-title {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subcategories {
+    padding-left: 1rem;
+}
+
+.subcategory-title {
+    padding: 0.5rem 1rem;
+}
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.slide-menu.open {
+    transform: translateX(0);
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.menu-header {
+    background-color: black;
+    color: white;
+    padding: 16px;
+}
+
+.welcome-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-in-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.category-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.subcategory-list {
+    padding-left: 16px;
+}
+
+.subcategory-item {
+    padding: 8px 16px;
+}
+.default-header {}

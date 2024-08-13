@@ -1,0 +1,14 @@
+#categorySlider {
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    margin-top: 150px;
+}
+
+.category-slider {
+    height: 100%; /* Make sure the Swiper takes up full height */
+}
+
+.slide-link img {
+    width: 100%;
+    height: auto; /* Adjust based on your needs */
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom'; // Only import Route and Routes, not Router
 import { useTranslation } from 'react-i18next';
 import HomeSlider from "./components/swiper/HomeSlider";
 import LoadingSpinner from "./Spinner";
@@ -6,9 +7,13 @@ import CategoriesList from "./components/categories/CategoriesList";
 import BannerSlider from "./components/swiper/BannerSlider";
 import Sections from "./components/sections/Sections";
 import Header from "./components/header/Header";
+import Brands from "./components/brands/Brands";
+import Footer from "./components/footer/Footer";
+import MobileHeader from "./components/header/MobileHeader";
+import CategoryPage from "./components/categories/CategoryPage";
 
 function App() {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     const [loading, setLoading] = useState(false);
 
     const changeLanguage = (lng) => {
@@ -25,13 +30,31 @@ function App() {
             ) : (
                 <div className="fade-in">
                     <Header changeLanguage={changeLanguage} currentLanguage={i18n.language} />
-                    <CategoriesList />
-                    <HomeSlider />
-                    <BannerSlider />
-                    <Sections />
+                    <MobileHeader />
+
+                    {/* No Router here, just components */}
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/category/:categorySlug" element={<CategoryPage />} />
+                        {/* Add more routes here if needed */}
+                    </Routes>
+
+                    <Footer />
                 </div>
             )}
         </div>
+    );
+}
+
+function Home() {
+    return (
+        <>
+            <CategoriesList />
+            <HomeSlider />
+            <BannerSlider />
+            <Sections />
+            <Brands />
+        </>
     );
 }
 
