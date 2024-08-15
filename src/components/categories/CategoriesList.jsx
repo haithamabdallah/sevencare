@@ -1,3 +1,4 @@
+// categories list
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';

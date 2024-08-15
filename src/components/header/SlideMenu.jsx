@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import categories from '../categories/categories'; // Import your categories data
-import './SlideMenu.css'; // Custom styles for the slide menu
+import { Link } from 'react-router-dom';
+import categories from '../categories/categories';
+import './SlideMenu.css';
 
 const SlideMenu = ({ isOpen, toggleMenu }) => {
     const menuRef = useRef(null);
 
-    // State to manage which category is open
     const [openCategoryId, setOpenCategoryId] = useState(null);
 
-    // Function to handle category click
     const handleCategoryClick = (categoryId) => {
-        // Toggle the selected category
         setOpenCategoryId((prevCategoryId) => (prevCategoryId === categoryId ? null : categoryId));
     };
 
@@ -52,14 +50,20 @@ const SlideMenu = ({ isOpen, toggleMenu }) => {
                                 className="category-header"
                                 onClick={() => handleCategoryClick(category.id)}
                             >
-                                <span>{category.name}</span>
+                                {/* Updated link to ensure proper slug path */}
+                                <Link to={`/category/${category.slug}`} onClick={toggleMenu}>
+                                    <span>{category.name}</span>
+                                </Link>
                                 <i className={`fa-solid ${openCategoryId === category.id ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                             </div>
                             {openCategoryId === category.id && (
                                 <div className="subcategory-list">
                                     {category.subcategories.map((subcategory) => (
                                         <div key={subcategory.id} className="subcategory-item">
-                                            {subcategory.name}
+                                            {/* Updated subcategory link to ensure proper slug path */}
+                                            <Link to={`/category/${category.slug}/${subcategory.slug}`} onClick={toggleMenu}>
+                                                {subcategory.name}
+                                            </Link>
                                         </div>
                                     ))}
                                 </div>

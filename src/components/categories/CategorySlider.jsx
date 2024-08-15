@@ -3,14 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import './categorySlider.css';
 
 const CategorySlider = ({ sliders }) => {
     return (
-        <section id="homeSlider">
+        <section id="categorySlider">
             <div className="max-w-[1230px] mx-auto px-[20px]">
                 <Swiper
                     autoplay={{
-                        delay: 2500,
+                        delay: 5500,
                         disableOnInteraction: false,
                     }}
                     loop={true}
@@ -18,8 +19,8 @@ const CategorySlider = ({ sliders }) => {
                         nextEl: '.home-next',
                         prevEl: '.home-prev',
                     } : false}
-                    modules={[Autoplay, Navigation]}
-                    className="home-slider"
+                    modules={[ Autoplay, Navigation]}
+                    className="category-slider"
                 >
                     {sliders.map(slide => (
                         <SwiperSlide key={slide.id}>

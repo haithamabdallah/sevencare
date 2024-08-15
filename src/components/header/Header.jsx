@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import categories from '../categories/categories';
 import './header.css';
 
@@ -108,7 +108,8 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                             <ul ref={dropdownRef} className="absolute top-[50px] left-0 mt-2 w-[400px] bg-white shadow-lg divide-y divide-gray-400">
                                 {categories.map((category) => (
                                     <li key={category.id} className="group relative">
-                                        <Link to={category.href} className="flex justify-between items-center px-4 py-2 text-gray-700">
+                                        {/* Updated link to ensure proper slug path */}
+                                        <Link to={`/category/${category.slug}`} className="flex justify-between items-center px-4 py-2 text-gray-700">
                                             <span className="font-bold">{t(`categories.${category.slug}`)}</span>
                                             {category.subcategories && <i className="fa-solid fa-chevron-right fa-sm text-blue-600"></i>}
                                         </Link>
@@ -116,7 +117,8 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                                             <ul className="absolute left-full top-0 mt-0 ml-2 w-[300px] bg-white shadow-lg hidden group-hover:block">
                                                 {category.subcategories.map((sub) => (
                                                     <li key={sub.id}>
-                                                        <Link to={`${category.href}/${sub.slug}`} className="block px-4 py-2 text-gray-700">
+                                                        {/* Updated subcategory link to ensure proper slug path */}
+                                                        <Link to={`/category/${category.slug}/${sub.slug}`} className="block px-4 py-2 text-gray-700">
                                                             {t(`categories.${sub.slug}`)}
                                                         </Link>
                                                     </li>

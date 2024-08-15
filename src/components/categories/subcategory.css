@@ -1,0 +1,16 @@
+#subCategory .subList .item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#subCategory .subList .item a img {
+  max-width: 210px;
+}
+#subCategory .subList .item a h1 {
+  font-size: 23px;
+  line-height: 29px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=subcategory.css.map */

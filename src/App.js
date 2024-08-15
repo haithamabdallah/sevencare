@@ -1,5 +1,6 @@
+//app
 import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom'; // Only import Route and Routes, not Router
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import HomeSlider from "./components/swiper/HomeSlider";
 import LoadingSpinner from "./Spinner";
@@ -10,7 +11,8 @@ import Header from "./components/header/Header";
 import Brands from "./components/brands/Brands";
 import Footer from "./components/footer/Footer";
 import MobileHeader from "./components/header/MobileHeader";
-import CategoryPage from "./components/categories/CategoryPage";
+import SubCategoryPage from './components/categories/SubCategoryPage';
+import CategoryPage from './components/categories/CategoryPage';
 
 function App() {
     const { i18n } = useTranslation();
@@ -32,12 +34,15 @@ function App() {
                     <Header changeLanguage={changeLanguage} currentLanguage={i18n.language} />
                     <MobileHeader />
 
-                    {/* No Router here, just components */}
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/category/:categorySlug" element={<CategoryPage />} />
-                        {/* Add more routes here if needed */}
-                    </Routes>
+                    <Router>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/category/:categorySlug" element={<CategoryPage />} />
+                            <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
+                            {/* Add other routes here */}
+                        </Routes>
+                    </Router>
+
 
                     <Footer />
                 </div>
@@ -45,6 +50,7 @@ function App() {
         </div>
     );
 }
+
 
 function Home() {
     return (

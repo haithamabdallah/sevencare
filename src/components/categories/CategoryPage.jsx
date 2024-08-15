@@ -1,9 +1,12 @@
+//Category page
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import categories from './categories';
-import CategorySlider from './CategorySlider';
 import Header from "../header/Header";
-import Footer from "../footer/Footer"; // Import the CategorySlider component
+import Footer from "../footer/Footer";
+import CategorySlider from './CategorySlider';
+import SubCategories from "./SubCategory";
 
 const CategoryPage = () => {
     const { categorySlug } = useParams();
@@ -28,6 +31,7 @@ const CategoryPage = () => {
             <Header />
             {/* Render CategorySlider and pass sliders data */}
             <CategorySlider sliders={categoryData.sliders} />
+            <SubCategories categorySlug={categorySlug} subcategories={categoryData.subcategories} />
             {/* Render other category details here */}
             <Footer />
         </div>
