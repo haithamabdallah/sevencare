@@ -34,14 +34,7 @@ function App() {
                     <Header changeLanguage={changeLanguage} currentLanguage={i18n.language} />
                     <MobileHeader />
 
-                    <Router>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/category/:categorySlug" element={<CategoryPage />} />
-                            <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
-                            {/* Add other routes here */}
-                        </Routes>
-                    </Router>
+                    <Home />
 
 
                     <Footer />

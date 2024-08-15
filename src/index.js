@@ -6,6 +6,7 @@ import './i18n'; // Import the i18n setup file
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 import CategoryPage from "./components/categories/CategoryPage";
+import SubCategoryPage from "./components/categories/SubCategoryPage";
 // import Page1 from './Page1'; // Example pages
 // import Page2 from './Page2';
 
@@ -18,6 +19,7 @@ root.render(
                 <Routes>
                     <Route path="/" element={<App />} />
                     <Route path="/category/:categorySlug" element={<CategoryPage />} />
+                    <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
                     {/*<Route path="/page1" element={<Page1 />} />
                     <Route path="/page2" element={<Page2 />} />*/}
                 </Routes>
