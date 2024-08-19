@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 import CategoryPage from "./components/categories/CategoryPage";
 import SubCategoryPage from "./components/categories/SubCategoryPage";
+import Login from "./components/users/Login";
+import Register from "./components/users/Register";
 // import Page1 from './Page1'; // Example pages
 // import Page2 from './Page2';
 
@@ -20,6 +22,8 @@ root.render(
                     <Route path="/" element={<App />} />
                     <Route path="/category/:categorySlug" element={<CategoryPage />} />
                     <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
                     {/*<Route path="/page1" element={<Page1 />} />
                     <Route path="/page2" element={<Page2 />} />*/}
                 </Routes>

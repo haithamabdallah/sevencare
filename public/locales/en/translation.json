@@ -67,7 +67,8 @@
   "headers": {
     "sign-in": "Sign In / Register",
     "my-favourite": "Favorites",
-    "my-cart": "My Cart"
+    "my-cart": "My Cart",
+    "remember-me": "Remember me"
   }
 
 }

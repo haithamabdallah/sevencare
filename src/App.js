@@ -1,6 +1,6 @@
 //app
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import { useTranslation } from 'react-i18next';
 import HomeSlider from "./components/swiper/HomeSlider";
 import LoadingSpinner from "./Spinner";
@@ -11,8 +11,7 @@ import Header from "./components/header/Header";
 import Brands from "./components/brands/Brands";
 import Footer from "./components/footer/Footer";
 import MobileHeader from "./components/header/MobileHeader";
-import SubCategoryPage from './components/categories/SubCategoryPage';
-import CategoryPage from './components/categories/CategoryPage';
+
 
 function App() {
     const { i18n } = useTranslation();

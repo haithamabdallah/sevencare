@@ -83,13 +83,28 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                     </div>
                     <nav className="flex items-center gap-[15px]">
                         {currentLanguage === 'en' ? (
-                            <button onClick={() => changeLanguage('ar')}>العربية</button>
+                            <button onClick={() => changeLanguage('ar')} className="flex justify-content items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]">
+                                <i className="text-blue-600 fa-solid fa-globe"></i>
+                                <span className="text-black text-sm font-bold hover:underline">العربية</span>
+                            </button>
                         ) : (
-                            <button onClick={() => changeLanguage('en')}>English</button>
+                            <button onClick={() => changeLanguage('en')} className="flex justify-content items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]">
+                                <i className="text-blue-600 fa-solid fa-globe"></i>
+                                <span className="text-black text-sm font-bold hover:underline">English</span>
+                            </button>
                         )}
-                        <Link to="/signin" className="text-gray-600">{t('headers.sign-in')}</Link>
-                        <Link to="/favorites" className="text-gray-600">{t('headers.my-favourite')}</Link>
-                        <Link to="/cart" className="text-gray-600">{t('headers.my-cart')}</Link>
+                        <Link to="/login" className="text-gray-600 flex justify-content items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]">
+                            <i className="text-blue-600 fa-regular fa-user"></i>
+                            <span className="text-black text-sm font-bold hover:underline">{t('headers.sign-in')}</span>
+                        </Link>
+                        <Link to="/favorites" className="text-gray-600 flex justify-content items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]">
+                            <i className="text-blue-600 fa-regular fa-heart"></i>
+                            <span className="text-black text-sm font-bold hover:underline">{t('headers.my-favourite')}</span>
+                        </Link>
+                        <Link to="/cart" className="text-gray-600 flex justify-content items-center gap-[10px] hover:underline">
+                            <i className="text-blue-600 fa-solid fa-cart-shopping"></i>
+                            <span className="text-black text-sm font-bold hover:underline">{t('headers.my-cart')}</span>
+                        </Link>
                     </nav>
                 </div>
                 <div className="bg-gray-100 flex justify-between items-center mt-[5px]">
@@ -105,7 +120,7 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                             <i className="fa-solid fa-chevron-down"></i>
                         </button>
                         {isDropdownOpen && (
-                            <ul ref={dropdownRef} className="absolute top-[50px] left-0 mt-2 w-[400px] bg-white shadow-lg divide-y divide-gray-400">
+                            <ul ref={dropdownRef} className="absolute top-[50px] left-0  w-[400px] bg-white shadow-lg divide-y divide-gray-400">
                                 {categories.map((category) => (
                                     <li key={category.id} className="group relative">
                                         {/* Updated link to ensure proper slug path */}
@@ -114,7 +129,7 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                                             {category.subcategories && <i className="fa-solid fa-chevron-right fa-sm text-blue-600"></i>}
                                         </Link>
                                         {category.subcategories && (
-                                            <ul className="absolute left-full top-0 mt-0 ml-2 w-[300px] bg-white shadow-lg hidden group-hover:block">
+                                            <ul className="absolute left-full top-0 mt-0  w-[300px] bg-white shadow-lg hidden group-hover:block">
                                                 {category.subcategories.map((sub) => (
                                                     <li key={sub.id}>
                                                         {/* Updated subcategory link to ensure proper slug path */}

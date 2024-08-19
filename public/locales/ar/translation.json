@@ -67,7 +67,8 @@
   "headers": {
     "sign-in": "تسجيل الدخول / التسجيل",
     "my-favourite": "المفضلة",
-    "my-cart": "سلة التسوق"
+    "my-cart": "سلة التسوق",
+    "remember-me": "تذكرني"
   }
 }
 
