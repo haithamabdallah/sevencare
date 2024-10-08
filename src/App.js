@@ -32,8 +32,11 @@ function App() {
                 <div className="fade-in">
                     <Header changeLanguage={changeLanguage} currentLanguage={i18n.language} />
                     <MobileHeader />
-
-                    <Home />
+                    <CategoriesList />
+                    <HomeSlider />
+                    <BannerSlider />
+                    <Sections />
+                    <Brands />
 
 
                     <Footer />
@@ -43,17 +46,5 @@ function App() {
     );
 }
 
-
-function Home() {
-    return (
-        <>
-            <CategoriesList />
-            <HomeSlider />
-            <BannerSlider />
-            <Sections />
-            <Brands />
-        </>
-    );
-}
 
 export default App;

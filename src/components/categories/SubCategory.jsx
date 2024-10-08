@@ -5,7 +5,8 @@ const SubCategories = ({ categorySlug, subcategories }) => {
     return (
         <section id="subCategory">
             <div className="max-w-[1230px] mx-auto px-[20px]">
-                <div className="subList grid grid-cols-4 gap-[100px]">
+                <h1>Shop By Skin Care Category</h1>
+                <div className="subList grid grid-cols-4 gap-[30px]">
                     {subcategories.map(sub => (
                         <div className="item" key={sub.id}>
                             <a href={`/category/${categorySlug}/${sub.slug}`}>

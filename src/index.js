@@ -9,25 +9,26 @@ import CategoryPage from "./components/categories/CategoryPage";
 import SubCategoryPage from "./components/categories/SubCategoryPage";
 import Login from "./components/users/Login";
 import Register from "./components/users/Register";
-// import Page1 from './Page1'; // Example pages
-// import Page2 from './Page2';
+import { CartProvider } from './components/Cart/CartContext/CartContext';
+import CartPage from "./components/Cart/CartPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
         <Router>
-            <Layout>
-                <Routes>
-                    <Route path="/" element={<App />} />
-                    <Route path="/category/:categorySlug" element={<CategoryPage />} />
-                    <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    {/*<Route path="/page1" element={<Page1 />} />
-                    <Route path="/page2" element={<Page2 />} />*/}
-                </Routes>
-            </Layout>
+            <CartProvider>
+                <Layout>
+                    <Routes>
+                        <Route path="/" element={<App />} />
+                        <Route path="/category/:categorySlug" element={<CategoryPage />} />
+                        <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/cart" element={<CartPage />} />
+                    </Routes>
+                </Layout>
+            </CartProvider>
         </Router>
     </React.StrictMode>
 );

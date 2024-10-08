@@ -1,0 +1,31 @@
+#breadcrumb {
+  margin-top: 150px;
+  padding: 15px 16px;
+}
+#breadcrumb .breadcrumb {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+}
+#breadcrumb .breadcrumb li {
+  position: relative;
+  color: #757575;
+  line-height: 20px;
+}
+#breadcrumb .breadcrumb li:after {
+  content: "/";
+  margin-left: 10px;
+  color: #757575;
+}
+#breadcrumb .breadcrumb li:last-child:after {
+  content: "";
+}
+#breadcrumb .breadcrumb li a {
+  font-size: 14px;
+  color: #757575;
+}
+#breadcrumb .breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=Breadcrumb.css.map */

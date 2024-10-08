@@ -23,9 +23,10 @@ const categories = [
                 products: [
                     {
                         id: 1,
-                        name: 'MacBook Pro',
-                        image: 'path_to_image',
-                        price: '$2000',
+                        name: ' ISISPHARMA Teen Derm Hydra Soothing Moisturizer 40ml ',
+                        image: '/images/products/p-01.webp',
+                        price: '78.09',
+                        oldPrice: '111.55'
                     },
                     // More products...
                 ],
@@ -116,7 +117,7 @@ const categories = [
         products: [
             {
                 id: 1,
-                name: 'Hair Dye Brush',
+                name: ' ISISPHARMA Teen Derm Hydra Soothing Moisturizer 40ml ',
                 url: '/product/1',
                 coverImage: '/images/products/coverImage1.jpg' || '/images/default.jpg',
                 description: 'This is the description for product 1.',

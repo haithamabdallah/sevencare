@@ -1,3 +1,16 @@
+#subCategory {
+  padding: 80px 0;
+  margin-top: 40px;
+  background: #faf5f9;
+}
+#subCategory h1 {
+  font-size: 29px;
+  color: black;
+  line-height: 36px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
 #subCategory .subList .item a {
   display: flex;
   justify-content: center;

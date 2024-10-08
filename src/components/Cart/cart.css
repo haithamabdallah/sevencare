@@ -1,0 +1,23 @@
+/* cart.css */
+.cart-container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cart-items {
+    margin-top: 20px;
+}
+
+.cart-item {
+    padding: 10px 0;
+}
+
+.cart-item img {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+}
+
+.cart-item input {
+    width: 40px; /* Width of the quantity input */
+}
