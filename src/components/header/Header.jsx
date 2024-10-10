@@ -96,7 +96,7 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                         </Link>
                     </nav>
                 </div>
-                <div className="bg-gray-100 flex justify-between items-center mt-[5px]">
+                <div className="bg-gray-100 flex items-center mt-[5px] gap-[20px]">
                     {/* Categories and Search */}
                     <div
                         className="flex items-center gap-[30px] relative"
@@ -131,10 +131,10 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                                 ))}
                             </ul>
                         )}
-                        <Link to="/offers" className="text-red-600 font-bold">{t('offers')}</Link>
                     </div>
+                        <Link to="/offers" className="text-red-600 font-bold">{t('offers')}</Link>
+                        <input type="text" placeholder={t('search')} className="border border-gray-300 p-2 ml-auto" />
                     <div>
-                        <input type="text" placeholder={t('search')} className="border border-gray-300 p-2" />
                     </div>
                 </div>
             </div>

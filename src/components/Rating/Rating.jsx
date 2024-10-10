@@ -24,7 +24,7 @@ const Rating = ({ initialRating = 0, onRatingChange }) => {
                 return (
                     <span
                         key={index}
-                        className={`cursor-pointer text-2xl ${
+                        className={`cursor-pointer text-md ${
                             ratingValue <= (hover || rating) ? 'text-yellow-500' : 'text-gray-300'
                         }`}
                         onClick={() => handleClick(ratingValue)} // Set rating on click

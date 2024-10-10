@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import $ from 'jquery'; // Import jQuery
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -9,7 +8,7 @@ import Footer from '../footer/Footer';
 import categories from '../categories/categories'; // Ensure this is your JSON data source
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import { useCart } from '../Cart/CartContext/CartContext';
-import Rating from '../Rating/Rating';
+import './subcategorypage.css';
 
 const SubCategoryPage = () => {
     const { categorySlug, subCategorySlug } = useParams();
@@ -59,7 +58,6 @@ const SubCategoryPage = () => {
     }, [location]);
 
     const { addToCart } = useCart();
-    const [cart, setCart] = useState([]);
 
     const handleQuantityChange = (productId, action) => {
         setSubCategoryData(prevData => {
@@ -99,12 +97,6 @@ const SubCategoryPage = () => {
         }
     };
 
-    const [userRating, setUserRating] = useState(0);
-
-    const handleRatingChange = (newRating) => {
-        setUserRating(newRating);
-        console.log('User selected rating:', newRating);
-    };
 
     if (!subCategoryData) {
         return <div>Loading...</div>;
@@ -116,55 +108,84 @@ const SubCategoryPage = () => {
             <div id="subCategoryPage">
                 <Breadcrumb breadcrumbData={breadcrumbData} />
 
-                <div className="max-w-[1230px] mx-auto px-[20px] py-[50px]">
-                    <h1 className="text-2xl font-bold">{subCategoryData.name}</h1>
+                <div className="page-content">
+                    <div className="max-w-[1230px] mx-auto px-[20px] py-[50px]">
+                        <h1 className="text-2xl font-bold">{subCategoryData.name}</h1>
 
-                    <div className="grid grid-cols-4 gap-[20px] mt-[30px]">
-                        {subCategoryData.products && subCategoryData.products.map(product => (
-                            <div key={product.id} className="product-item p-4 border border-gray-200 rounded-lg">
-                                <img src={product.image} alt={product.name} className="w-full h-auto" />
-                                <h2 className="text-lg font-bold mt-2">{product.name}</h2>
-                                <p className="mt-1 text-gray-700">
-                                    {product.price} SAR
-                                    {product.oldPrice && <strike className="ml-2 text-sm text-gray-500">{product.oldPrice} SAR</strike>}
-                                </p>
+                        <div className="products-filter">
+                            <div className="filter-option">Filter</div>
+                            <div className="products-list grid grid-cols-4 gap-[15px]">
+                                {subCategoryData.products && subCategoryData.products.map(product => (
 
-                                <div className="mt-2">
-                                    <Rating initialRating={userRating} onRatingChange={handleRatingChange} />
-                                    <p>Your rating: {userRating}</p>
-                                </div>
+                                    <div key={product.id} className="product-item flex flex-col gap-[10px] bg-white rounded-lg p-3">
+                                        <a href={`/category/${categorySlug}/${subCategorySlug}/product/${product.id}`}>
+                                            <img src={product.image} alt={product.name} className="w-full h-auto" />
+                                        </a>
+                                        {/* Conditionally render the discount div if there's an old price */}
+                                        {product.oldPrice && (
+                                            <div className="w-full bg-red-500 rounded-sm flex items-center text-white justify-center py-1">
+                                                <span className="text-xs font-bold">
+                                                    Save {Math.floor(((product.oldPrice - product.price) / product.oldPrice) * 100)}%
+                                                </span>
+                                            </div>
+                                        )}
+                                        <div className="flex flex-col gap-[10px] mt-auto">
+                                        <a href={`/category/${categorySlug}/${subCategorySlug}/product/${product.id}`}>
+                                            <h2 className="text-xs font-bold line_3">{product.name}</h2>
+                                        </a>
+                                        <p className="text-black text-sm font-bold">
+                                            {product.price} SAR
+                                            {product.oldPrice && <strike className="ml-2 text-xs text-gray-500">{product.oldPrice} SAR</strike>}
+                                        </p>
 
-                                <div className="flex items-center mt-4">
-                                    <button
-                                        onClick={() => handleQuantityChange(product.id, 'decrease')}
-                                        className="px-2 py-1 border border-gray-300 text-gray-700 bg-gray-100 hover:bg-gray-200"
-                                    >
-                                        -
-                                    </button>
-                                    <input
-                                        type="text"
-                                        value={product.quantity || 1}
-                                        className="mx-2 w-12 text-center border border-gray-300"
-                                        onChange={(e) => handleQuantityInput(product.id, e.target.value)}
-                                    />
-                                    <button
-                                        onClick={() => handleQuantityChange(product.id, 'increase')}
-                                        className="px-2 py-1 border border-gray-300 text-gray-700 bg-gray-100 hover:bg-gray-200"
-                                    >
-                                        +
-                                    </button>
-                                </div>
 
-                                <button
-                                    onClick={() => handleAddToCart(product.id, product.quantity || 1)}
-                                    className="w-full mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-                                >
-                                    Add to Cart
-                                </button>
+                                            <div className="flex gap-[10px] justify-between items-center">
+                                                {/* Star Rating */}
+                                                <p className="text-yellow-500">
+                                                    {'★'.repeat(Math.floor(product.rating))} {/* Filled stars */}
+                                                    {'☆'.repeat(5 - Math.floor(product.rating))} {/* Empty stars */}
+                                                </p>
+
+                                                <div className="shippedby w-[90px] items-center">
+                                                    <img src={product.shipping} alt=""/>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex items-center">
+                                                <button
+                                                    onClick={() => handleQuantityChange(product.id, 'decrease')}
+                                                    className="px-2 py-1 border border-blue-500 text-blue-400 bg-white rounded-md w-[36px] h-[36px] hover:bg-gray-200"
+                                                >
+                                                    -
+                                                </button>
+                                                <input
+                                                    type="text"
+                                                    value={product.quantity || 1}
+                                                    className="w-10 text-center"
+                                                    onChange={(e) => handleQuantityInput(product.id, e.target.value)}
+                                                />
+                                                <button
+                                                    onClick={() => handleQuantityChange(product.id, 'increase')}
+                                                    className="px-2 py-1 border border-blue-500 text-blue-400 bg-white rounded-md w-[36px] h-[36px] hover:bg-gray-200"
+                                                >
+                                                    +
+                                                </button>
+
+                                                <button
+                                                    onClick={() => handleAddToCart(product.id, product.quantity || 1)}
+                                                    className="bg-blue-500 text-white py-2 rounded-md w-[36px] h-[36px] hover:bg-blue-600 ml-auto"
+                                                >
+                                                    <i className="flex items-center justify-center text-white fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
 
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />

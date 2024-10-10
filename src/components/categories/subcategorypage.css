@@ -1,5 +1,17 @@
 #subCategoryPage {
   margin-top: 150px;
 }
+#subCategoryPage .page-content .products-filter {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 15px;
+}
+#subCategoryPage .page-content .products-filter .products-list .line_3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  min-height: 45px;
+}
 
 /*# sourceMappingURL=subcategorypage.css.map */

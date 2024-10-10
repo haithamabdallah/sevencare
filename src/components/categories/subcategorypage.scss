@@ -1,3 +1,26 @@
 #subCategoryPage {
   margin-top: 150px;
+
+  .page-content {
+
+    .products-filter {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-gap: 15px;
+
+      .filter-option {}
+
+      .products-list {
+        .line_3 {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          min-height: 45px;
+        }
+      }
+    }
+  }
+
+
 }
