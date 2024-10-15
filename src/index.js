@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 import CategoryPage from "./components/categories/CategoryPage";
 import SubCategoryPage from "./components/categories/SubCategoryPage";
+import ProductPage from "./components/ProductPage/ProductPage";
 import Login from "./components/users/Login";
 import Register from "./components/users/Register";
 import { CartProvider } from './components/Cart/CartContext/CartContext';
@@ -33,6 +34,7 @@ root.render(
                         <Route path="/" element={<App />} />
                         <Route path="/category/:categorySlug" element={<CategoryPage />} />
                         <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
+                        <Route path="/category/:categorySlug/:subCategorySlug/product/:productId" element={<ProductPage />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="/cart" element={<CartPage />} />
