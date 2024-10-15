@@ -3,9 +3,14 @@ import { useTranslation } from 'react-i18next';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import axios from 'axios';
+import { useAuth } from '../AuthContext'; // Import AuthContext to manage login state
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const { t, i18n } = useTranslation();
+    const { login } = useAuth(); // Access the login function from AuthContext
+    const navigate = useNavigate();
+
     const [loginMethod, setLoginMethod] = useState('mobile');
     const [mobileOrEmail, setMobileOrEmail] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -14,12 +19,13 @@ const Login = () => {
 
     // Automatically detect user's country based on IP
     useEffect(() => {
-        axios.get('https://ipapi.co/json/')
-            .then(response => {
-                const countryCode = response.data.country_code.toLowerCase();
-                setCountryCode(countryCode);
+        axios
+            .get('https://ipapi.co/json/')
+            .then((response) => {
+                const detectedCountry = response.data.country_code.toLowerCase();
+                setCountryCode(detectedCountry);
             })
-            .catch(error => {
+            .catch((error) => {
                 console.error("Could not fetch user's country", error);
             });
     }, []);
@@ -36,18 +42,17 @@ const Login = () => {
         setErrorMessage('');
     };
 
+    const validateMobileNumber = (number) => {
+        return number.length >= 10; // Modify this logic as per your needs
+    };
+
     const handleLogin = () => {
-        // Logic to validate the mobile number or email
         if (validateMobileNumber(mobileOrEmail)) {
-            setShowPassword(true);
+            login();  // Logs in the user
+            navigate('/'); // Redirect to homepage or another page
         } else {
             setErrorMessage('Invalid mobile number. Please try again.');
         }
-    };
-
-    const validateMobileNumber = (number) => {
-        // Add your validation logic here. For simplicity, assuming any number is valid
-        return number.length >= 10;
     };
 
     const handleChangeLanguage = (language) => {
@@ -58,9 +63,19 @@ const Login = () => {
         <>
             <div className="max-w-[960px] mx-auto language-only my-[20px] border-01">
                 {i18n.language === 'en' ? (
-                    <button className="border-solid border border-gray-300 rounded py-[5px] px-[10px] flex justify-center items-center" onClick={() => handleChangeLanguage('ar')}>العربية</button>
+                    <button
+                        className="border-solid border border-gray-300 rounded py-[5px] px-[10px] flex justify-center items-center"
+                        onClick={() => handleChangeLanguage('ar')}
+                    >
+                        العربية
+                    </button>
                 ) : (
-                    <button className="border-solid border border-gray-300 rounded py-[5px] px-[10px] flex justify-center items-center" onClick={() => handleChangeLanguage('en')}>English</button>
+                    <button
+                        className="border-solid border border-gray-300 rounded py-[5px] px-[10px] flex justify-center items-center"
+                        onClick={() => handleChangeLanguage('en')}
+                    >
+                        English
+                    </button>
                 )}
             </div>
 
@@ -71,7 +86,12 @@ const Login = () => {
                             <img src="/images/logo/logo.png" alt="Logo" className="logo" />
                         </a>
                     </div>
-                    <h2>{loginMethod === 'mobile' ? 'Login with your mobile number' : 'Login with your email'}</h2>
+
+                    <h2>
+                        {loginMethod === 'mobile'
+                            ? 'Login with your mobile number'
+                            : 'Login with your email'}
+                    </h2>
 
                     {loginMethod === 'mobile' ? (
                         <div className="py-[30px]">
@@ -86,7 +106,9 @@ const Login = () => {
                                     autoFocus: true,
                                 }}
                             />
-                            {errorMessage && <div className="error-message">{errorMessage}</div>}
+                            {errorMessage && (
+                                <div className="error-message">{errorMessage}</div>
+                            )}
                         </div>
                     ) : (
                         <div>
@@ -95,34 +117,49 @@ const Login = () => {
                                 type="email"
                                 id="mobileOrEmail"
                                 value={mobileOrEmail}
-                                onChange={(e) => handlePhoneNumberChange(e.target.value)}
+                                onChange={(e) => setMobileOrEmail(e.target.value)}
                                 placeholder="Enter your email"
                             />
-                            {errorMessage && <div className="error-message">{errorMessage}</div>}
+                            {errorMessage && (
+                                <div className="error-message">{errorMessage}</div>
+                            )}
                         </div>
                     )}
 
                     {showPassword && (
                         <div className="password-group">
                             <label htmlFor="password">Password</label>
-                            <input type="password" id="password" placeholder="Enter your password" />
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                            />
                         </div>
                     )}
 
-                    <button className="login-button" onClick={handleLogin}>Login</button>
-
-
+                    <button className="login-button" onClick={handleLogin}>
+                        Login
+                    </button>
 
                     <div className="remember-me">
                         <input type="checkbox" id="rememberMe" />
-                        <label htmlFor="rememberMe">{t('headers.remember-me')}</label>
+                        <label htmlFor="rememberMe">
+                            {t('headers.remember-me')}
+                        </label>
                     </div>
 
                     <div className="links">
                         <a href="/forgot-password">Forget password?</a>
-                        <a href="/register" className="create-account-link">Create account</a>
-                        <button className="login-method-link" onClick={handleLoginMethodChange}>
-                            {loginMethod === 'mobile' ? 'Login via email' : 'Login via mobile number'}
+                        <a href="/register" className="create-account-link">
+                            Create account
+                        </a>
+                        <button
+                            className="login-method-link"
+                            onClick={handleLoginMethodChange}
+                        >
+                            {loginMethod === 'mobile'
+                                ? 'Login via email'
+                                : 'Login via mobile number'}
                         </button>
                     </div>
                 </div>

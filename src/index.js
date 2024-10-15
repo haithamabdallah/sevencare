@@ -22,34 +22,37 @@ import DeliveryInfo from "./components/pages/DeliveryInfo";
 import Contactus from "./components/pages/Contactus";
 import Stores from "./components/pages/Stores";
 import Corporate from "./components/pages/Corporate";
+import { AuthProvider } from './components/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Router>
-            <CartProvider>
-                <Layout>
-                    <Routes>
-                        <Route path="/" element={<App />} />
-                        <Route path="/category/:categorySlug" element={<CategoryPage />} />
-                        <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
-                        <Route path="/category/:categorySlug/:subCategorySlug/product/:productId" element={<ProductPage />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/cart" element={<CartPage />} />
-                        <Route path="/privacy" element={<Privacy />} />
-                        <Route path="/terms" element={<Terms />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/faq" element={<Faq />} />
-                        <Route path="/exchange-return" element={<Exchange />} />
-                        <Route path="/delivery-information" element={<DeliveryInfo />} />
-                        <Route path="/stores" element={<Stores />} />
-                        <Route path="/corporate" element={<Corporate />} />
-                        <Route path="/contacts" element={<Contactus />} />
-                    </Routes>
-                </Layout>
-            </CartProvider>
-        </Router>
+        <AuthProvider>
+            <Router>
+                <CartProvider>
+                    <Layout>
+                        <Routes>
+                            <Route path="/" element={<App />} />
+                            <Route path="/category/:categorySlug" element={<CategoryPage />} />
+                            <Route path="/category/:categorySlug/:subCategorySlug" element={<SubCategoryPage />} />
+                            <Route path="/category/:categorySlug/:subCategorySlug/product/:productId" element={<ProductPage />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<Register />} />
+                            <Route path="/cart" element={<CartPage />} />
+                            <Route path="/privacy" element={<Privacy />} />
+                            <Route path="/terms" element={<Terms />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/faq" element={<Faq />} />
+                            <Route path="/exchange-return" element={<Exchange />} />
+                            <Route path="/delivery-information" element={<DeliveryInfo />} />
+                            <Route path="/stores" element={<Stores />} />
+                            <Route path="/corporate" element={<Corporate />} />
+                            <Route path="/contacts" element={<Contactus />} />
+                        </Routes>
+                    </Layout>
+                </CartProvider>
+            </Router>
+        </AuthProvider>
     </React.StrictMode>
 );
