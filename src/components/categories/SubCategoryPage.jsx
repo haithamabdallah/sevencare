@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
 import categories from '../categories/categories'; // Ensure this is your JSON data source
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import { useCart } from '../Cart/CartContext/CartContext';
@@ -104,7 +101,7 @@ const SubCategoryPage = () => {
 
     return (
         <div>
-            <Header />
+
             <div id="subCategoryPage">
                 <Breadcrumb breadcrumbData={breadcrumbData} />
 
@@ -154,7 +151,7 @@ const SubCategoryPage = () => {
                                             <div className="flex items-center">
                                                 <button
                                                     onClick={() => handleQuantityChange(product.id, 'decrease')}
-                                                    className="px-2 py-1 border border-blue-500 text-blue-400 bg-white rounded-md w-[36px] h-[36px] hover:bg-gray-200"
+                                                    className="text-xl px-2 py-1 border border-blue-500 text-blue-400 bg-white rounded-md w-[36px] h-[36px] hover:bg-gray-200"
                                                 >
                                                     -
                                                 </button>
@@ -166,7 +163,7 @@ const SubCategoryPage = () => {
                                                 />
                                                 <button
                                                     onClick={() => handleQuantityChange(product.id, 'increase')}
-                                                    className="px-2 py-1 border border-blue-500 text-blue-400 bg-white rounded-md w-[36px] h-[36px] hover:bg-gray-200"
+                                                    className="text-xl px-2 py-1 border border-blue-500 text-blue-400 bg-white rounded-md w-[36px] h-[36px] hover:bg-gray-200"
                                                 >
                                                     +
                                                 </button>
@@ -189,7 +186,7 @@ const SubCategoryPage = () => {
                 </div>
             </div>
             <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-            <Footer />
+
         </div>
     );
 };

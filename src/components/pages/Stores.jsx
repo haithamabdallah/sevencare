@@ -3,22 +3,22 @@ import React from "react";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 
 
-const Contactus = () => {
+const Stores = () => {
 
     const breadcrumbData = [
         { name: "Home", href: "/" },
-        { name: "Contact us", href: "/contacts" }
+        { name: "Stores", href: "/stores" }
     ];
 
     return (
         <div id="page-contents">
             <Breadcrumb breadcrumbData={breadcrumbData} />
             <div className="max-w-[1230px] mx-auto px-[20px]">
-                <h1>Contact us</h1>
-                <p>This is the Contact us page content.</p>
+                <h1>Stores</h1>
+                <p>This is the Stores page content.</p>
             </div>
         </div>
     );
 };
 
-export default Contactus;
+export default Stores;

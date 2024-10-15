@@ -176,4 +176,7 @@ header {
   font-size: 14px;
   margin-top: 5px;
 }
-
+#page-contents {
+  margin-top: 150px;
+  padding-bottom: 80px;
+}

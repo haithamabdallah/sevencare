@@ -24,11 +24,11 @@ export default function Footer() {
                             <div className="footer-sub-cols">
                                 <div>
                                     <a href="/privacy">Privacy Policy</a>
-                                    <a href="/">Terms & Conditions</a>
+                                    <a href="/terms">Terms & Conditions</a>
                                 </div>
                                 <div>
-                                    <a href="/">Contact Us</a>
-                                    <a href="/">About Us</a>
+                                    <a href="/contacts">Contact Us</a>
+                                    <a href="/faq">Faq</a>
                                 </div>
                             </div>
                         </div>
@@ -36,16 +36,16 @@ export default function Footer() {
                         {/* Shop With NahdiOnline */}
                         <div className="footer-col">
                             <h4>Shop With NahdiOnline</h4>
-                            <a href="/">Delivery Information</a>
-                            <a href="/">Exchange and Return</a>
-                            <a href="/">Store Locator</a>
+                            <a href="/delivery-information">Delivery Information</a>
+                            <a href="/exchange-return">Exchange and Return</a>
+                            <a href="/stores">Store Locator</a>
                         </div>
 
                         {/* Nahdi Medical Company */}
                         <div className="footer-col">
                             <h4>Nahdi Medical Company</h4>
-                            <a href="/">About Us</a>
-                            <a href="/">Corporate Website</a>
+                            <a href="/about">About Us</a>
+                            <a href="/corporate">Corporate Website</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ export default function Footer() {
 
             <div className="footer-copyright">
                 <div className="max-w-[1230px] mx-auto px-[20px]">
-                    <p>©2022 Nahdi. All rights reserved.</p>
+                    <p>©2024 Seven Care. All rights reserved.</p>
                 </div>
             </div>
         </>

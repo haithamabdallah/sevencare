@@ -13,6 +13,14 @@ import Register from "./components/users/Register";
 import { CartProvider } from './components/Cart/CartContext/CartContext';
 import CartPage from "./components/Cart/CartPage";
 import Privacy from "./components/pages/Privacy";
+import Terms from "./components/pages/Terms";
+import About from "./components/pages/About";
+import Faq from "./components/pages/Faq";
+import Exchange from "./components/pages/Exchange";
+import DeliveryInfo from "./components/pages/DeliveryInfo";
+import Contactus from "./components/pages/Contactus";
+import Stores from "./components/pages/Stores";
+import Corporate from "./components/pages/Corporate";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,6 +37,14 @@ root.render(
                         <Route path="/register" element={<Register />} />
                         <Route path="/cart" element={<CartPage />} />
                         <Route path="/privacy" element={<Privacy />} />
+                        <Route path="/terms" element={<Terms />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/faq" element={<Faq />} />
+                        <Route path="/exchange-return" element={<Exchange />} />
+                        <Route path="/delivery-information" element={<DeliveryInfo />} />
+                        <Route path="/stores" element={<Stores />} />
+                        <Route path="/corporate" element={<Corporate />} />
+                        <Route path="/contacts" element={<Contactus />} />
                     </Routes>
                 </Layout>
             </CartProvider>
