@@ -1,8 +1,9 @@
+// index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import './i18n'; // Import the i18n setup file
+import './i18n';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 import CategoryPage from "./components/categories/CategoryPage";
@@ -11,6 +12,7 @@ import Login from "./components/users/Login";
 import Register from "./components/users/Register";
 import { CartProvider } from './components/Cart/CartContext/CartContext';
 import CartPage from "./components/Cart/CartPage";
+import Privacy from "./components/pages/Privacy";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,6 +28,7 @@ root.render(
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="/cart" element={<CartPage />} />
+                        <Route path="/privacy" element={<Privacy />} />
                     </Routes>
                 </Layout>
             </CartProvider>

@@ -23,7 +23,7 @@ export default function Footer() {
                             <h4>Guest's Services</h4>
                             <div className="footer-sub-cols">
                                 <div>
-                                    <a href="/">Privacy Policy</a>
+                                    <a href="/privacy">Privacy Policy</a>
                                     <a href="/">Terms & Conditions</a>
                                 </div>
                                 <div>
