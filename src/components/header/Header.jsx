@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import categories from '../categories/categories';
 import './header.css';
 import { useCart } from '../Cart/CartContext/CartContext';
+import UserLoged from './UserLoged';
+import { useAuth } from '../AuthContext';
 
 const Header = ({ changeLanguage, currentLanguage }) => {
     const { t } = useTranslation();
@@ -14,6 +16,7 @@ const Header = ({ changeLanguage, currentLanguage }) => {
     const dropdownRef = useRef(null);
     const delta = 5;
     const { cartItems } = useCart(); // Get cart items
+    const { isLoggedIn } = useAuth();
 
     // Scroll behavior for header
     useEffect(() => {
@@ -76,10 +79,22 @@ const Header = ({ changeLanguage, currentLanguage }) => {
                             </button>
                         )}
                         {/* Links */}
-                        <Link to="/login" className="text-gray-600 flex justify-content items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]">
-                            <i className="text-blue-600 fa-regular fa-user"></i>
-                            <span className="text-black text-sm font-bold hover:underline">{t('headers.sign-in')}</span>
-                        </Link>
+
+                        <div className="flex items-center text-gray-600 flex justify-content items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]">
+                            {isLoggedIn ? (
+                                <UserLoged />
+                            ) : (
+                                <Link
+                                    to="/login"
+                                    className="text-gray-600 flex items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]"
+                                >
+                                    <i className="text-blue-600 fa-regular fa-user"></i>
+                                    <span className="text-black text-sm font-bold hover:underline">
+                        Sign In
+                    </span>
+                                </Link>
+                            )}
+                        </div>
                         <Link to="/favorites" className="text-gray-600 flex justify-content items-center gap-[10px] border-r-2 border-gray-300 pr-[20px]">
                             <i className="text-blue-600 fa-regular fa-heart"></i>
                             <span className="text-black text-sm font-bold hover:underline">{t('headers.my-favourite')}</span>

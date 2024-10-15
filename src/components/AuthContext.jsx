@@ -1,35 +1,26 @@
-// src/components/AuthContext.js
-import React, { createContext, useContext, useEffect, useState } from 'react';
+// AuthContext.js
+import React, { createContext, useContext, useState } from 'react';
 
-// Create AuthContext
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [user, setUser] = useState(null); // Store user info
 
-    // Check if user is logged in from localStorage (on initial load)
-    useEffect(() => {
-        const savedLoginState = JSON.parse(localStorage.getItem('isLoggedIn'));
-        if (savedLoginState) {
-            setIsLoggedIn(savedLoginState);
-        }
-    }, []);
-
-    // Login and Logout Handlers
-    const login = () => {
+    const login = (userInfo) => {
         setIsLoggedIn(true);
-        localStorage.setItem('isLoggedIn', true); // Save login status
+        setUser(userInfo); // Save user data (e.g., name)
     };
 
     const logout = () => {
         setIsLoggedIn(false);
-        localStorage.removeItem('isLoggedIn'); // Clear login status
+        setUser(null);
     };
 
     return (
-        <AuthContext.Provider value={{ isLoggedIn, login, logout }}>
+        <AuthContext.Provider value={{ isLoggedIn, user, login, logout }}>
             {children}
         </AuthContext.Provider>
     );

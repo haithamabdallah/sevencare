@@ -46,17 +46,27 @@ const Login = () => {
         return number.length >= 10; // Modify this logic as per your needs
     };
 
-    const handleLogin = () => {
+    /*const handleLogin = () => {
         if (validateMobileNumber(mobileOrEmail)) {
             login();  // Logs in the user
             navigate('/'); // Redirect to homepage or another page
         } else {
             setErrorMessage('Invalid mobile number. Please try again.');
         }
-    };
+    };*/
 
     const handleChangeLanguage = (language) => {
         i18n.changeLanguage(language);
+    };
+
+    const handleLogin = () => {
+        if (validateMobileNumber(mobileOrEmail)) {
+            const userInfo = { name: 'John Doe' }; // Example user data
+            login(userInfo); // Pass user info to AuthContext
+            navigate('/');
+        } else {
+            setErrorMessage('Invalid mobile number. Please try again.');
+        }
     };
 
     return (
